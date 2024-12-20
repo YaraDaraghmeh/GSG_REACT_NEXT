@@ -1,0 +1,19 @@
+.container {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width :500px;
+}
+
+.expression {
+    color: #4b5563;
+    text-align: right;
+}
+
+
+.result {
+    font-size: 1.5rem;
+    color: #4b5563;
+    text-align: right;
+}

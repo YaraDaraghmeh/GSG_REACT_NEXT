@@ -1,0 +1,28 @@
+
+.operation-button {
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ 
+  .operation-default {
+    background-color: #f97316; 
+  }
+  
+
+  .equals-button {
+    background-color: #42e980; 
+    width : 100% 
+  }
+  
+
+  .operation-button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  
