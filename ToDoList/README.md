@@ -35,7 +35,7 @@ src/
 ├── App.tsx
 └── index.tsx
 ```
-##Dependencies
+## Dependencies
 
 -React
 -TypeScript
