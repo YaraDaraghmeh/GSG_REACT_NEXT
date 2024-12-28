@@ -1,0 +1,85 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.iconContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainer svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.textContent {
+  flex-grow: 1;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.25rem 0;
+}
+
+.value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+
+.created {
+  background: linear-gradient(135deg, #1a5f7a 0%, #0d2f3f 100%);
+  box-shadow: 0 4px 20px rgba(26, 95, 122, 0.2);
+}
+
+.completed {
+  background: linear-gradient(135deg, #2d8a62 0%, #1a4d38 100%);
+  box-shadow: 0 4px 20px rgba(45, 138, 98, 0.2);
+}
+
+.urgent {
+  background: linear-gradient(135deg, #b44d12 0%, #8a2b09 100%);
+  box-shadow: 0 4px 20px rgba(180, 77, 18, 0.2);
+}
+

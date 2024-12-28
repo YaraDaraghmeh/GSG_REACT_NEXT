@@ -1,0 +1,30 @@
+
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: #E1E5DC;
+  margin-bottom: 2rem;
+}
+.date-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.date-header .day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E1E5DC;
+}
+
+.date-header .date {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 5px;
+}

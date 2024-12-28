@@ -1,0 +1,42 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #E9EDE4;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+}
+
+.todo-title {
+  margin-left: 0.5rem;
+}
+
+.completed .todo-title {
+  text-decoration: line-through;
+  color: #7a282c;
+}
+
+.urgent-badge {
+  background-color: #7a282c;
+  color: rgb(0, 1, 0);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
