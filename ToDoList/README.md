@@ -37,9 +37,9 @@ src/
 ```
 ## Dependencies
 
--React
--TypeScript
--Lucide React (for icons)
+- React
+- TypeScript
+- Lucide React (for icons)
 ## Prerequisites
 
 - Node.js (version 14.0 or higher)
