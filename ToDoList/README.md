@@ -1,50 +1,111 @@
-# React + TypeScript + Vite
+# React TypeScript Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive todo list application built with React and TypeScript. The application features a clean interface with task management capabilities, including creating, completing, and deleting tasks, as well as tracking urgent tasks separately.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Create new tasks with optional urgent status
+- 📊 Track created, completed, and urgent tasks
+- 🗑️ Delete tasks when no longer needed
+- 📅 Current date display with day name
+- 🎨 Clean and Userfriendly  interface
+- 💪 Built with TypeScript for enhanced type safety
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── components/
+│   ├── AllTodos/
+│   │   ├── AllTodos.css
+│   │   └── AllTodos.tsx
+│   ├── Form/
+│   │   ├── Form.css
+│   │   └── Form.tsx
+│   ├── TodoData/
+│   │   ├── TodoData.module.css
+│   │   └── TodoData.tsx
+│   └── TodoItem/
+│       ├── TodoItem.css
+│       └── TodoItem.tsx
+├── types/
+│   └── todo.ts
+├── assets/
+├── App.css
+├── App.tsx
+└── index.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Node.js (version 14.0 or higher)
+- npm  package manager
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [https://github.com/YaraDaraghmeh/GSG_REACT_NEXT/tree/main/ToDoList]
+cd [ToDoList]
 ```
+
+2. Install dependencies:
+```bash
+npm install
+
+```
+
+3. Start the development server:
+```bash
+npm start
+# or
+
+```
+
+## Usage
+
+1. Enter a task in the input field at the top of the application
+2. Check the "Urgent" checkbox if the task is urgent
+3. Click "Add Todo" or press Enter to add the task
+4. Click on a task to mark it as complete
+5. Click the "×" button to delete a task
+6. View task statistics in the dashboard cards
+
+## Component Overview
+
+- **App.tsx**: Main application component that manages state and renders child components
+- **Form**: Handles task input and creation
+- **TodoData**: Displays statistics about tasks (created, completed, urgent)
+- **AllTodos**: Renders the list of all todos
+- **TodoItem**: Individual todo item component
+
+## Type Definitions
+
+The main Todo type is defined in `types/todo.ts`:
+
+```typescript
+export interface Todo {
+  id: number;
+  text: string;
+  isCompleted: boolean;
+  isUrgent: boolean;
+}
+```
+
+
+
+## Development Notes
+
+- The project uses functional components with React Hooks
+- State management is handled using the useState Hook
+- CSS modules are used for component-specific styling
+- TypeScript is used throughout the project for type safety
+
+## Future Improvements
+
+- Add local storage persistence
+- Implement task categories/tags
+- Add due dates for tasks
+- Include task priority levels
+- Add user authentication
+- Implement task filtering and sorting
