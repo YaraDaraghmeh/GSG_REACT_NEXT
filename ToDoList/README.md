@@ -35,7 +35,11 @@ src/
 ├── App.tsx
 └── index.tsx
 ```
+##Dependencies
 
+-React
+-TypeScript
+-Lucide React (for icons)
 ## Prerequisites
 
 - Node.js (version 14.0 or higher)
@@ -73,11 +77,31 @@ npm start
 
 ## Component Overview
 
-- **App.tsx**: Main application component that manages state and renders child components
-- **Form**: Handles task input and creation
-- **TodoData**: Displays statistics about tasks (created, completed, urgent)
-- **AllTodos**: Renders the list of all todos
-- **TodoItem**: Individual todo item component
+### App.tsx
+Main application component that manages state and renders child components
+
+### TodoData
+Statistics dashboard component that displays task metrics using Lucide React icons:
+- Created Tasks (BarChart2 icon)
+- Completed Tasks (CheckSquare icon)
+- Urgent Tasks (AlertTriangle icon)
+
+Example usage of TodoData component:
+```typescript
+import { TodoData } from './components/TodoData/TodoData';
+
+// In your component:
+<TodoData todos={todos} />
+```
+
+### Form
+Handles task input and creation
+
+### AllTodos
+Renders the list of all todos
+
+### TodoItem
+Individual todo item component
 
 ## Type Definitions
 
@@ -100,6 +124,8 @@ export interface Todo {
 - State management is handled using the useState Hook
 - CSS modules are used for component-specific styling
 - TypeScript is used throughout the project for type safety
+- Lucide React icons are used for visual indicators in the statistics dashboard
+
 
 ## Future Improvements
 
@@ -109,3 +135,5 @@ export interface Todo {
 - Include task priority levels
 - Add user authentication
 - Implement task filtering and sorting
+- Add more detailed statistics and visualizations
+- Implement dark mode theme
